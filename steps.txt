@@ -1,0 +1,39 @@
+
+# DOCKERIZED FLASK WEB APPLICATION
+
+
+# STEP 1: Create a simple Flask application
+# app.py contains the Flask web application code.
+# It runs a basic web server on port 5000.
+
+
+# STEP 2: Define application dependencies
+# requirements.txt lists the required Python packages.
+# In this project, Flask is the main dependency.
+
+
+# STEP 3: Create a Dockerfile
+# The Dockerfile defines how the Docker image is built.
+# It uses a Python base image, installs dependencies,
+# copies application files, and runs the Flask app.
+
+
+# STEP 4: Build the Docker image
+# This command builds a Docker image named 'flask-app'
+# using the Dockerfile in the current directory.
+docker build -t flask-app .
+
+
+# STEP 5: Run the Docker container
+# This command runs the container and maps container port 5000
+# to host port 5000, allowing browser access.
+docker run -p 5000:5000 flask-app
+
+
+# STEP 6: Access the application in the browser
+# Open the following URL in a web browser:
+# http://127.0.0.1:5000/
+# Expected Output:
+# "Hello! This is a Dockerized Flask App 🚀"
+
+
